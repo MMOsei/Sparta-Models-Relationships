@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_19_175024) do
+ActiveRecord::Schema.define(version: 2018_06_19_210802) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "companies", force: :cascade do |t|
+    t.string "name"
+    t.string "location"
+    t.string "team_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "favourites", force: :cascade do |t|
     t.string "first_name"
@@ -21,6 +29,14 @@ ActiveRecord::Schema.define(version: 2018_06_19_175024) do
     t.string "food"
     t.string "dessert"
     t.string "colour"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.string "manager"
+    t.integer "years_worked"
+    t.string "industry"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  manager: MyString
+  years_worked: 1
+  industry: MyString
+
+two:
+  manager: MyString
+  years_worked: 1
+  industry: MyString
